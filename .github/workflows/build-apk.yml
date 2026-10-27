@@ -1,0 +1,54 @@
+name: Build StandupLab Android APK
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Debug APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Set up Gradle 8.9
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Build Debug APK with Gradle
+        run: |
+          cd android
+          gradle :app:assembleDebug --stacktrace
+
+      - name: Prepare APK Artifact
+        run: |
+          mkdir -p output-apk
+          APK_PATH=$(find android/app/build/outputs/apk/debug -name "*.apk" | head -n 1)
+          if [ -z "$APK_PATH" ]; then
+            echo "::error::APK файл не найден после сборки!"
+            exit 1
+          fi
+          echo "Найден APK: $APK_PATH"
+          cp "$APK_PATH" output-apk/StandupLab-Android-debug.apk
+
+      - name: Upload StandupLab APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: StandupLab-Android-APK
+          path: output-apk/StandupLab-Android-debug.apk
+          retention-days: 30
