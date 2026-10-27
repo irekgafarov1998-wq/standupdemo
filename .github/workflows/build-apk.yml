@@ -22,9 +22,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Accept Android SDK Licenses
+      - name: Accept Android SDK Licenses & Install Platform
         run: |
           yes | sdkmanager --licenses || true
+          sdkmanager --install "platforms;android-35" "build-tools;35.0.0"
 
       - name: Set up Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
