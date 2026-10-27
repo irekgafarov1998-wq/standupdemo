@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">StandupLab DEMO</string>
+    <string name="nav_jokes">Шутки</string>
+    <string name="nav_setlist">Сет-листы</string>
+    <string name="nav_prompter">Суфлер</string>
+    <string name="nav_notebook">Блокнот</string>
+    <string name="nav_riffs">Разгоны с ИИ</string>
+    
+    <string name="stage_panic_btn">ПАНИКА / СПАСИ ШУТКОЙ</string>
+    <string name="stage_laugh_hit">УДАЧА / СМЕХ (+1)</string>
+    <string name="stage_silence_miss">ПРОВАЛ / ТИШИНА (-1)</string>
+    <string name="stage_timer_remaining">Осталось времени</string>
+</resources>

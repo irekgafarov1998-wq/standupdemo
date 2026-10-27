@@ -1,0 +1,17 @@
+{
+  "name": "StandupLab — Студия стендап-комика",
+  "short_name": "StandupLab",
+  "description": "Студия стендап-комика: База шуток, Разгоны с ИИ, Сет-листы, Стендап-Камера и Синхронизация",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0818",
+  "theme_color": "#0e0725",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f103c" />
+      <stop offset="50%" stop-color="#120824" />
+      <stop offset="100%" stop-color="#090314" />
+    </linearGradient>
+    <linearGradient id="squircleBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <radialGradient id="stageGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#a855f7" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="micBodyGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="25%" stop-color="#e2e8f0" />
+      <stop offset="60%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="40%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <radialGradient id="mouthGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="70%" stop-color="#881337" />
+      <stop offset="100%" stop-color="#4c0519" />
+    </radialGradient>
+    <radialGradient id="blushGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fb7185" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#fb7185" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGrad)" />
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="url(#squircleBorder)" stroke-width="8" opacity="0.8" />
+  <circle cx="256" cy="220" r="210" fill="url(#stageGlow)" />
+
+  <path d="M 405 95 Q 405 125 435 125 Q 405 125 405 155 Q 405 125 375 125 Q 405 125 405 95 Z" fill="#fbbf24" />
+  <circle cx="95" cy="385" r="8" fill="#fbbf24" />
+
+  <!-- Stand & Bow tie -->
+  <rect x="242" y="340" width="28" height="85" rx="6" fill="#64748b" />
+  <g transform="translate(256, 350)">
+    <polygon points="0,0 -46,-22 -48,22 0,0" fill="url(#goldGrad)" stroke="#78350f" stroke-width="2" />
+    <polygon points="0,0 46,-22 48,22 0,0" fill="url(#goldGrad)" stroke="#78350f" stroke-width="2" />
+    <ellipse cx="0" cy="0" rx="14" ry="12" fill="#fef08a" stroke="#78350f" stroke-width="2" />
+  </g>
+
+  <!-- Microphone Head -->
+  <rect x="160" y="100" width="192" height="235" rx="96" fill="url(#micBodyGrad)" stroke="#334155" stroke-width="6" />
+
+  <!-- Cheeks -->
+  <circle cx="192" cy="254" r="22" fill="url(#blushGrad)" />
+  <circle cx="320" cy="254" r="22" fill="url(#blushGrad)" />
+
+  <!-- Eyes -->
+  <g transform="translate(205, 208)">
+    <ellipse cx="0" cy="0" rx="26" ry="32" fill="#ffffff" stroke="#1e293b" stroke-width="4" />
+    <ellipse cx="2" cy="2" rx="18" ry="24" fill="#0f172a" />
+    <ellipse cx="-4" cy="-8" rx="8" ry="11" fill="#ffffff" />
+    <circle cx="7" cy="8" r="4" fill="#ffffff" />
+  </g>
+  <g transform="translate(307, 208)">
+    <ellipse cx="0" cy="0" rx="26" ry="32" fill="#ffffff" stroke="#1e293b" stroke-width="4" />
+    <ellipse cx="-2" cy="2" rx="18" ry="24" fill="#0f172a" />
+    <ellipse cx="-8" cy="-8" rx="8" ry="11" fill="#ffffff" />
+    <circle cx="3" cy="8" r="4" fill="#ffffff" />
+  </g>
+
+  <!-- Eyebrows -->
+  <path d="M 184 165 Q 206 150 228 163" fill="none" stroke="#1e293b" stroke-width="5" stroke-linecap="round" />
+  <path d="M 284 163 Q 306 150 328 165" fill="none" stroke="#1e293b" stroke-width="5" stroke-linecap="round" />
+
+  <!-- Smile -->
+  <g transform="translate(256, 266)">
+    <path d="M -34 0 Q 0 -6 34 0 C 34 26 22 46 0 46 C -22 46 -34 26 -34 0 Z" fill="url(#mouthGrad)" stroke="#1e293b" stroke-width="4.5" />
+    <path d="M -16 26 C -12 18 12 18 16 26 C 14 38 -14 38 -16 26 Z" fill="#fb7185" />
+    <path d="M -20 0 Q 0 4 20 0 L 16 7 Q 0 10 -16 7 Z" fill="#ffffff" opacity="0.95" />
+  </g>
+</svg>
